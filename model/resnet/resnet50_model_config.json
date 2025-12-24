@@ -1,0 +1,27 @@
+{
+    "model_name": "resnet50_model",
+    "timestamp": "20251224_065810",
+    "architecture": "ResNet50 Transfer Learning",
+    "base_model": "ResNet50",
+    "input_shape": [
+        128,
+        128,
+        3
+    ],
+    "num_classes": 3,
+    "class_names": [
+        "Angry",
+        "Sad",
+        "Surprise"
+    ],
+    "total_params": 24812675,
+    "trainable_params": 15669507,
+    "training_strategy": "Two-stage (frozen base + fine-tuning)",
+    "stage1_epochs": 15,
+    "stage2_epochs": 25,
+    "total_epochs": 40,
+    "final_val_accuracy": 0.728748083114624,
+    "best_val_accuracy": 0.728748083114624,
+    "final_val_loss": 1.8312910795211792,
+    "best_val_loss": 1.8312910795211792
+}

@@ -1,0 +1,23 @@
+{
+    "overall_accuracy": 0.8029366306027821,
+    "per_class_metrics": {
+        "Angry": {
+            "precision": 0.6726618705035972,
+            "recall": 0.7137404580152672,
+            "f1_score": 0.6925925925925925,
+            "support": 262
+        },
+        "Sad": {
+            "precision": 0.8653846153846154,
+            "recall": 0.8587786259541985,
+            "f1_score": 0.8620689655172413,
+            "support": 786
+        },
+        "Surprise": {
+            "precision": 0.75,
+            "recall": 0.7195121951219512,
+            "f1_score": 0.7344398340248963,
+            "support": 246
+        }
+    }
+}

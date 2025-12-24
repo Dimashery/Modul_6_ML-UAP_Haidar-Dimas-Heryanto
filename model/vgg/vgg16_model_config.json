@@ -1,0 +1,58 @@
+{
+    "model_name": "vgg16_model",
+    "timestamp": "20251224_100208",
+    "architecture": "VGG16 Transfer Learning",
+    "base_model": "VGG16",
+    "input_shape": [
+        128,
+        128,
+        3
+    ],
+    "num_classes": 3,
+    "class_names": [
+        "Angry",
+        "Sad",
+        "Surprise"
+    ],
+    "class_weights": {
+        "0": 1.6453414572226452,
+        "1": 0.5491442128452805,
+        "2": 1.7506753106428958
+    },
+    "total_params": 15147075,
+    "trainable_params": 13409027,
+    "training_samples": 5187,
+    "validation_samples": 1294,
+    "batch_size": 32,
+    "training_strategy": "Three-stage (frozen base \u2192 block5 \u2192 block4+5)",
+    "stage1_info": {
+        "description": "Train custom head only (frozen base)",
+        "epochs": 20,
+        "initial_lr": 0.0001,
+        "final_train_acc": 0.5829959511756897,
+        "final_val_acc": 0.6066460609436035
+    },
+    "stage2_info": {
+        "description": "Fine-tune block5",
+        "epochs": 25,
+        "initial_lr": 5e-05,
+        "final_train_acc": 0.8687102198600769,
+        "final_val_acc": 0.827666163444519
+    },
+    "stage3_info": {
+        "description": "Fine-tune block4 + block5",
+        "epochs": 17,
+        "initial_lr": 1e-05,
+        "final_train_acc": 0.9128590822219849,
+        "final_val_acc": 0.8632148504257202
+    },
+    "total_epochs": 62,
+    "final_train_accuracy": 0.9128590822219849,
+    "final_val_accuracy": 0.8632148504257202,
+    "final_train_loss": 0.97968989610672,
+    "final_val_loss": 1.1677731275558472,
+    "best_val_accuracy": 0.8693972229957581,
+    "best_val_loss": 1.1462916135787964,
+    "optimizer": "Adam",
+    "loss_function": "categorical_crossentropy"
+}

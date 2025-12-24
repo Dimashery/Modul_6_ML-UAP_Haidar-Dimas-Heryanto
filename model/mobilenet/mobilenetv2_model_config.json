@@ -1,0 +1,41 @@
+{
+    "model_name": "mobilenetv2_model",
+    "timestamp": "20251224_080243",
+    "architecture": "MobileNetV2 Transfer Learning",
+    "base_model": "MobileNetV2",
+    "input_shape": [
+        128,
+        128,
+        3
+    ],
+    "num_classes": 3,
+    "class_names": [
+        "Angry",
+        "Sad",
+        "Surprise"
+    ],
+    "class_weights": {
+        "0": 1.6453414572226452,
+        "1": 0.5491442128452805,
+        "2": 1.7506753106428958
+    },
+    "total_params": 3086659,
+    "trainable_params": 2350979,
+    "training_samples": 5187,
+    "validation_samples": 1294,
+    "batch_size": 32,
+    "training_strategy": "Two-stage (frozen base + fine-tuning)",
+    "stage1_epochs": 15,
+    "stage2_epochs": 25,
+    "total_epochs": 40,
+    "final_train_accuracy": 0.6969346404075623,
+    "final_val_accuracy": 0.6993817687034607,
+    "final_train_loss": 1.7748926877975464,
+    "final_val_loss": 1.8166617155075073,
+    "best_val_accuracy": 0.7001545429229736,
+    "best_val_loss": 1.8166617155075073,
+    "optimizer": "Adam",
+    "initial_learning_rate": 0.0001,
+    "fine_tuning_learning_rate": 1e-05,
+    "loss_function": "categorical_crossentropy"
+}
