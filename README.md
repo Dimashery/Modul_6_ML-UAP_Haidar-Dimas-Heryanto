@@ -246,6 +246,21 @@ ResNet50     ██████████████████████�
 MobileNetV2  ███████████████████████████████              70%
 ```
 
+### 💻 Accuracy and Loss Visualization
+
+#### CNN
+![CNN Accuracy and Loss](assets/CNN_Graph_Accuracy_and_Loss-.jpg)
+
+#### ResNet50
+![ResNet50 Accuracy and Loss](assets/ResNet50_Graph_Accuracy_and_Loss-.jpg)
+
+#### MobileNetV2
+![MobileNetV2 Accuracy and Loss](assets/MobileNet_Graph_Accuracy_and_Loss-.jpg)
+
+#### VGG16
+![VGG16 Accuracy and Loss](assets/VGG_Graph_Accuracy_and_Loss-.jpg)
+
+
 ---
 
 ## 🎯 Detailed Per-Class Performance
@@ -311,6 +326,9 @@ MobileNetV2  ██████████████████████�
 | Surprise | Angry | 14 | 35.0% of Surprise errors | 0.652 |
 | Angry | Surprise | 11 | 23.9% of Angry errors | 0.661 |
 
+#### Confusion Matrix Visualization
+![VGG16 Confusion Matrix](assets/VGG_Confusion-Matrix.jpg)
+
 #### Key Insights:
 1. **Sad ↔ Angry** is the most common confusion (85 total errors)
 2. **Surprise → Sad** is the second most common (26 errors)
@@ -327,11 +345,17 @@ MobileNetV2  ██████████████████████�
 | Medium (0.6-0.8) | 58 | 34.3% |
 | High (≥0.8) | 69 | 40.8% |
 
+#### Error Analysis Visualization
+![VGG16 Error Analysis](assets/VGG_Graph_Accuracy_and_Loss-.jpg)
+
 ⚠️ **Important Finding**: 40.8% of errors occur with high confidence, indicating systematic misclassification patterns rather than model uncertainty.
 
 ---
 
 ### CNN Model - Error Analysis
+
+#### Confusion Matrix Visualization
+![CNN Confusion Matrix](assets/CNN_Confusion-Matrix.jpg)
 
 #### Confusion Matrix Highlights:
 - **Angry → Sad**: 63 errors (90% of Angry errors)
@@ -343,11 +367,21 @@ MobileNetV2  ██████████████████████�
 - Incorrect predictions: **0.708 confidence**
 - Confidence Gap: **0.163**
 
+#### Error Analysis Visualization
+![CNN Error Analysis](assets/CNN_Graph_Error_Analysis.jpg)
+
+
+#### Missclasification Example
+![CNN Missclasification Example](assets/CNN_Missclasified-Sample.jpg)
+
 **Observation**: Good confidence discrimination, but lower overall accuracy than VGG16.
 
 ---
 
 ### ResNet50 - Error Analysis
+
+#### Confusion Matrix Visualization
+![ResNet50 Confusion Matrix](assets/ResNet50_Confusion-Matrix.jpg)
 
 #### Major Issues:
 1. **Poor Angry Detection**: Only 42.4% recall
@@ -359,12 +393,21 @@ MobileNetV2  ██████████████████████�
 
 3. **Surprise Detection**: Moderate (58.5% recall)
    - 69 misclassified as Sad (67.6% of errors)
+  
+#### Error Analysis Visualization
+![ResNet50 Error Analysis](assets/ResNet50_Graph_Error_Analysis.jpg)
+
+#### Missclasification Example
+![CNN Missclasification Example](assets/ResNet50_Missclasified-Sample.jpg)
 
 **Critical Finding**: ResNet50 shows **class bias** toward Sad emotion.
 
 ---
 
 ### MobileNetV2 - Error Analysis
+
+#### Confusion Matrix Visualization
+![MobileNetV2 Confusion Matrix](assets/MobileNet_Confusion-Matrix.jpg)
 
 #### Confusion Patterns:
 - **Angry → Sad**: 114 errors (79.7% of Angry errors)
@@ -375,6 +418,12 @@ MobileNetV2  ██████████████████████�
 - Correct: **0.753**
 - Incorrect: **0.626**
 - Gap: **0.127** (lowest among all models)
+
+#### Error Analysis Visualization
+![MobileNetV2 Error Analysis](assets/MobileNet_Graph_Error_Analysis.jpg)
+
+#### Missclasification Example
+![MobileNetV2 Missclasification Example](assets/MobileNet_Missclasified-Sample.jpg)
 
 **Observation**: Model shows uncertainty, reflected in lower confidence scores.
 
