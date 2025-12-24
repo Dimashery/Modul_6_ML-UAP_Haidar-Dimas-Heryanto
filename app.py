@@ -12,7 +12,10 @@ from plotly.subplots import make_subplots
 st.set_page_config(page_title="Image Classification Dashboard", layout="wide")
 
 # --- PATH CONFIGURATION ---
-BASE_MODEL_PATH = r"D:\KULIAH\Semester 7\Machine Learning\PRAK\UAP\Github\model"
+# --- PATH CONFIGURATION ---
+# Gunakan os.getcwd() atau langsung path relatif agar fleksibel di lokal maupun cloud
+BASE_MODEL_PATH = "model" 
+
 MODELS = {
     "CNN Custom": os.path.join(BASE_MODEL_PATH, "cnn", "cnn_model.keras"),
     "MobileNetV2": os.path.join(BASE_MODEL_PATH, "mobilenet", "mobilenetv2_model.keras"),
@@ -31,9 +34,8 @@ HISTORY_PATHS = {
     "CNN Custom": os.path.join(BASE_MODEL_PATH, "cnn", "cnn_model_history.json"),
     "MobileNetV2": os.path.join(BASE_MODEL_PATH, "mobilenet", "mobilenetv2_model_history.json"),
     "VGG16": os.path.join(BASE_MODEL_PATH, "vgg", "vgg16_model_history.json"),
-    "ResNet50": os.path.join(BASE_MODEL_PATH, "resnet", "resnet50_model_history.json"), # Pastikan path ini ada
+    "ResNet50": os.path.join(BASE_MODEL_PATH, "resnet", "resnet50_model_history.json"),
 }
-
 
 # --- COLOR PALETTES (Gradien Minimalis) ---
 MODEL_COLORS = {
