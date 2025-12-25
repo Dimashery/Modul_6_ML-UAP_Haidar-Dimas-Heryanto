@@ -36,7 +36,7 @@ This project implements a **comprehensive emotion recognition system** using dee
 
 ### 🎓 Academic Context
 - **Course**: Machine Learning - Semester 7
-- **Institution**: [Your University Name]
+- **Institution**: University of Muhammadiyah Malang
 - **Project Type**: Final Assignment (UAP)
 
 ### 🌟 Project Highlights
